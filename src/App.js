@@ -7,7 +7,7 @@ import Register from './pages/register/Register';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 
-import { createBrowserRouter, RouterProvider, Route, Outlet, Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet, Navigate } from "react-router-dom";
 
 function App() {
   const currentUser = true;
