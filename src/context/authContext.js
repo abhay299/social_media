@@ -9,6 +9,12 @@ export const AuthContextProvider = ({ children }) => {
 
 	const login = () => {
 
+		setCurrentUser({
+			id: 1,
+			name: "Abhay Gupta",
+			profilePic:
+				"https://images.unsplash.com/photo-1517105274840-437212774105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJpZW5kbHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+		});
 	};
 
 	useEffect(() => {
@@ -19,8 +25,7 @@ export const AuthContextProvider = ({ children }) => {
 		<AuthContext.Provider value={{ currentUser, login }}>
 			{children}
 		</AuthContext.Provider>
-
-	)
+	);
 };
 
 
