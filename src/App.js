@@ -14,11 +14,13 @@ function App() {
 
   const Layout = () => {
     return (
-      <div>
+      <div className='theme-dark'>
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
           <RightBar />
         </div>
       </div>

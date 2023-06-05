@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import './leftBar.scss';
 import Friends from "../../assets/1.png";
 import Groups from "../../assets/2.png";
 import Market from "../../assets/3.png";
@@ -14,79 +15,83 @@ import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 
 const LeftBar = () => {
+
+	const { currentUser } = true;
+
 	return (
-		<div className='leftBar'>
-			<div className='container'>
-				<div className='menu'>
-					<div className='user'>
-						{/* <img src="https://images.unsplash.com/photo-1517105274840-437212774105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJpZW5kbHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-							alt="" /> */}
+		<div className="leftBar">
+			<div className="container">
+				<div className="menu">
+					<div className="user">
+						<img src="https://images.unsplash.com/photo-1517105274840-437212774105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJpZW5kbHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+							alt=""
+						/>
 						<span>Abhay Gupta</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Friends} alt="" />
 						<span>Friends</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Groups} alt="" />
 						<span>Groups</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Market} alt="" />
 						<span>Marketplace</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Watch} alt="" />
 						<span>Watch</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Memories} alt="" />
 						<span>Memories</span>
 					</div>
 				</div>
 				<hr />
-				<div className='menu'>
+				<div className="menu">
 					<span>Your shortcuts</span>
-					<div className='item'>
+					<div className="item">
 						<img src={Events} alt="" />
 						<span>Events</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Gaming} alt="" />
 						<span>Gaming</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Gallery} alt="" />
 						<span>Gallery</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Videos} alt="" />
 						<span>Videos</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Messages} alt="" />
 						<span>Messages</span>
 					</div>
 				</div>
 				<hr />
-				<div className='menu'>
+				<div className="menu">
 					<span>Others</span>
-					<div className='item'>
+					<div className="item">
 						<img src={Fund} alt="" />
-						<span>Fund</span>
+						<span>Fundraiser</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Tutorials} alt="" />
 						<span>Tutorials</span>
 					</div>
-					<div className='item'>
+					<div className="item">
 						<img src={Courses} alt="" />
 						<span>Courses</span>
 					</div>
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export default LeftBar;
