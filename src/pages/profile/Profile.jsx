@@ -1,8 +1,13 @@
+import "./profile.scss";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import "./profile.scss";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import PlaceIcon from "@mui/icons-material/Place";
+import LanguageIcon from "@mui/icons-material/Language";
+import Posts from "../../components/posts/Posts";
 
 const Profile = () => {
 	return (
@@ -18,27 +23,44 @@ const Profile = () => {
 					className="profilePic" />
 			</div>
 			<div className="profileContainer">
-				<div className="userInfo">
+				<div className="userInformation">
 					<div className="left">
 						<a href="https://facebook.com">
-							<FacebookTwoToneIcon fontSize="small" />
+							<FacebookTwoToneIcon fontSize="medium" />
 						</a>
 						<a href="https://instagram.com">
-							<InstagramIcon fontSize="small" />
+							<InstagramIcon fontSize="medium" />
 						</a>
 						<a href="https://linkedin.com">
-							<LinkedInIcon fontSize="small" />
+							<LinkedInIcon fontSize="medium" />
 						</a>
 						<a href="https://twitter.com">
-							<TwitterIcon fontSize="small" />
+							<TwitterIcon fontSize="medium" />
 						</a>
 					</div>
-					<div className="center"></div>
-					<div className="right"></div>
+					<div className="center">
+						<span>Abhay Gupta</span>
+						<div className="info">
+							<div className="item">
+								<PlaceIcon />
+								<span>USA</span>
+							</div>
+							<div className="item">
+								<LanguageIcon />
+								<span>abhay.dev</span>
+							</div>
+						</div>
+						<button>follow</button>
+					</div>
+					<div className="right">
+						<EmailOutlinedIcon />
+						<MoreVertIcon />
+					</div>
 				</div>
+				<Posts />
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export default Profile;
