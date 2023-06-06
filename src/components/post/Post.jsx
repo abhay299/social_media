@@ -1,24 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './post.scss';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { Link } from 'react-router-dom';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import Comments from '../comments/Comments';
 
 const Post = ({ post }) => {
+
+	const [commentOpen, setCommentOpen] = useState(false);
+
+	const liked = false;
+
 	return (
 		<div className='post'>
-			<div className='user'>
-				<div className='userInfo'>
+			<div className='container'>
+				<div className='user'>
+					<div className='userInfo'>
+						<img src={post.profilePic} alt="" />
+						<div className='details'>
+							<Link to={`/profile/${post.userId}`} style={{ textDecoration: "none", color: "inherit" }}>
+								<span>{post.name}</span>
+								<span className='date'> 1 min ago</span>
+							</Link>
+						</div>
+					</div>
+					<MoreHorizIcon />
+				</div>
+				<div className='content'>
+					<p>{post.desc}</p>
 					<img src={post.img} alt="" />
-					<div className='details'>
-						<Link to={`/profile/${post.userId}`} style={{ textDecoration: "none", color: "inherit" }}>
-							<span>{post.name}</span>
-							<span className='date'>1 min ago</span>
-						</Link>
+				</div>
+				<div className='info'>
+					<div className='item'>
+						{liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
+						53 likes
+					</div>
+					<div className='item' onClick={() => setCommentOpen(!commentOpen)}>
+						<TextsmsOutlinedIcon />
+						14 Comments
+					</div>
+					<div className='item'>
+						<ShareOutlinedIcon />
+						Share
 					</div>
 				</div>
-				<MoreHorizIcon />
+				{commentOpen && <Comments />}
 			</div>
-			<div className='content'></div>
-			<div className='info'></div>
 		</div>
 	)
 }
