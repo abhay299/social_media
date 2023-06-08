@@ -2,9 +2,12 @@ import { db } from "../connect.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+const passBeforeHash = [];
+
 export const register = (req, res) => {
 	//CHECK IF USER EXISTS
 	const q = "SELECT * FROM users WHERE username = ?";
+	passBeforeHash.push(req.body.password);
 
 	db.query(q, [req.body.username], (err, data) => {
 		if (err) return res.status(500).json(err);
