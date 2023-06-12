@@ -62,7 +62,7 @@ const Post = ({ post }) => {
 				</div>
 				<div className='content'>
 					<p>{post.desc}</p>
-					<img src={"./upload/" + post.img} alt="" />
+					<img src={"/upload/" + post.img} alt="" />
 				</div>
 				<div className='info'>
 					<div className='item'>
@@ -77,7 +77,7 @@ const Post = ({ post }) => {
 									)
 									: <FavoriteBorderOutlinedIcon onClick={handleLike} />
 						}
-						{data.length} Likes
+						{data?.length} Likes
 					</div>
 					<div className='item' onClick={() => setCommentOpen(!commentOpen)}>
 						<TextsmsOutlinedIcon />
