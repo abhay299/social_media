@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
 import './post.scss';
+import React, { useContext, useState } from 'react';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import { Link } from 'react-router-dom';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import { Link } from 'react-router-dom';
 import Comments from '../comments/Comments';
 import moment from "moment";
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
