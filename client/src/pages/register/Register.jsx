@@ -31,7 +31,6 @@ const Register = () => {
 		} catch (err) {
 			setErr(err.response?.data);
 		}
-		setInputs("");
 	};
 
 	// console.log(err);
