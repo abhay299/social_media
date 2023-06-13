@@ -1,75 +1,94 @@
 @import "../../style.scss";
 
 .stories {
-  display: flex;
-  gap: 8px;
-  height: 180px;
-  margin-bottom: 10px;
+	display: flex;
+	gap: 8px;
+	height: 180px;
+	margin-bottom: 10px;
 
-  @include mobile {
-    height: 50px;
-    margin-bottom: 0;
-    justify-content: space-between;
-  }
+	@include mobile {
+		height: 50px;
+		margin-bottom: 0;
+		justify-content: space-between;
+	}
 
-  @include tablet{
-    height: 150px;
-    gap: 20px;
-  }
+	@include tablet {
+		height: 150px;
+		gap: 20px;
+	}
 
-  .story {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    
-    // @include mobile {
-    //   flex: none;
-    //   width: 50px;
-    //   height: 50px;
-    //   border-radius: 50%;
-    // }
+	.story {
+		flex: 1;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    span {
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      color: white;
-      font-weight: 500;
+		// @include mobile {
+		//   flex: none;
+		//   width: 50px;
+		//   height: 50px;
+		//   border-radius: 50%;
+		// }
 
-      @include mobile {
-        display: none;
-      }
-    }
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		span {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			color: white;
+			font-weight: 500;
 
-    button {
-      position: absolute;
-      bottom: 40px;
-      left: 10px;
-      color: white;
-      background-color: #5271ff;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+			@include mobile {
+				display: none;
+			}
+		}
 
-      @include mobile {
-       left: 0;
-       right: 0;
-       top: 0;
-       bottom: 0;
-       margin: auto;
-      }
-    }
-  }
+		.btns {
+			position: absolute;
+			bottom: 24px;
+			left: 8px;
+			color: whitesmoke;
+			background-color: darksalmon;
+			border: none;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+			font-size: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			// @include mobile {
+			// 	left: 0;
+			// 	right: 0;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	margin: auto;
+			// }
+		}
+		.bntes {
+			position: absolute;
+			bottom: 38px;
+			left: 78px;
+			color: white;
+			background-color: #5271ff;
+			border: none;
+			cursor: pointer;
+			font-size: 17px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 5px;
+
+			// @include mobile {
+			// 	left: 0;
+			// 	right: 0;
+			// }
+		}
+	}
 }

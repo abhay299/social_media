@@ -61,7 +61,7 @@ export const Update = ({ setOpenUpdate, user }) => {
 		<div className="update">
 			<div className="wrapper">
 				<h1>Update Your Profile</h1>
-				<form>
+				<form method='POST'>
 					<div className="files">
 						<label htmlFor="cover">
 							<span>Cover Picture</span>
@@ -104,20 +104,20 @@ export const Update = ({ setOpenUpdate, user }) => {
 							onChange={(e) => setProfile(e.target.files[0])}
 						/>
 					</div>
-					{/* <label>Email</label>
+					<label>Email</label>
 					<input
 						type="text"
 						value={texts.email}
 						name="email"
 						onChange={handleChange}
-					/> */}
-					{/* <label>Password</label>
+					/>
+					<label>Password</label>
 					<input
 						type="text"
 						value={texts.password}
 						name="password"
 						onChange={handleChange}
-					/> */}
+					/>
 					<label>Name</label>
 					<input
 						type="text"

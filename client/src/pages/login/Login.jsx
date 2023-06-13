@@ -5,7 +5,6 @@ import { AuthContext } from "../../context/authContext";
 
 const Login = () => {
 
-	const { login } = useContext(AuthContext);
 
 	const [inputs, setInputs] = useState({
 		username: "",
@@ -14,9 +13,11 @@ const Login = () => {
 
 	const [err, setErr] = useState(null);
 
-	const navigate = useNavigate();
+	const navigate = useNavigate()
 
-	const handleChange = e => {
+	const { login } = useContext(AuthContext);
+
+	const handleChange = (e) => {
 		setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
 	};
 
@@ -27,16 +28,18 @@ const Login = () => {
 			await login(inputs);
 			navigate("/");
 		} catch (err) {
-			setErr(err.response.data)
+			setErr(err.response?.data)
 		}
 	};
+
+	// console.log(err);
 
 	return (
 		<div className="login">
 			<div className="card">
 				<div className="left">
 					<h1> Welcome! </h1>
-					<p></p>
+					<p>Find, Connect & Express yourself.</p>
 					<span> Don't have an account already? </span>
 					<Link to="/register">
 						<button>Register</button>
@@ -57,7 +60,7 @@ const Login = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export default Login;
