@@ -18,6 +18,7 @@ Welcome to the Social Media App! This application is built with React.js, CSS3, 
 
 - **Frontend**:
   - React.js
+  - SCSS
   - CSS3
 
 - **Backend**:
