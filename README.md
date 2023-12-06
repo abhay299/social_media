@@ -34,7 +34,7 @@ Welcome to the Social Media App! This application is built with React.js, SCSS, 
 _Home Page_
 
 ![image2](./client/public/Socials/SM-Feed.png)
-_Social Meida Feed_
+_Social Media Feed_
 
 ![image3](./client/public/Socials/socialMediaProfilePage.png)
 _User Profile Page_
